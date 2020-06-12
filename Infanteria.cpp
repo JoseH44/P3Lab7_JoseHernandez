@@ -10,7 +10,7 @@ Infanteria::Infanteria(int fila,int columna,Pieza*** tab,int jugador):Pieza(fila
 
 bool Infanteria::validar(int Fila, int Columna){
 	if(validarPosicion(Fila,Columna)){
-		//revisar si el movimiento es valido.
+		
 		
 		return true;
 	}else{

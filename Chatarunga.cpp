@@ -1,12 +1,14 @@
 #include "Chatarunga.h"
 
 #include <iostream>
-using namespace std;
 
+#include <string>
+using namespace std;
 
 
 Chatarunga::Chatarunga()
 {
+	turno = true;
 	size = 8;
 	tablero = new Pieza**[size];
 	
@@ -78,6 +80,35 @@ void Chatarunga::llenarTablero(){
 		
 }
 
+void Chatarunga::jugar(){
+	
+	string movimiento;
+	if(turno){
+		cout<<endl<<"Jugador 1(Piezas Blancas) Ingrese las Coordenadas: ";
+		
+		turno = false;
+	}else{
+		turno = true;
+	}
+	
+}
+
+
+bool Chatarunga::validarString(string pString,int& x,int& y,int& i,int& j){
+	bool validez = false;
+	
+	x = pString[1] - '0';
+	y = pString[0] - 'A';
+	
+	if(pString[0] == 'A'){
+		 
+		validez = true;
+	}
+	
+	
+	
+	
+}
 
 Chatarunga::~Chatarunga()
 {
