@@ -2,10 +2,11 @@
 #include <iostream>
 using namespace std;
 
-Pieza::Pieza(int fila,int columna,Pieza*** tablero){
+Pieza::Pieza(int fila,int columna,Pieza*** tablero,int jugador){
 	this->fila = fila;
 	this->columna = columna;
 	this->tablero= tablero;
+	this->jugador = jugador;
 }
 
 int Pieza::getFila(){

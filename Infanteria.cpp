@@ -1,7 +1,11 @@
 #include "Infanteria.h"
 
-Infanteria::Infanteria(int fila,int columna,Pieza*** tab):Pieza(fila,columna,tab)
+Infanteria::Infanteria(int fila,int columna,Pieza*** tab,int jugador):Pieza(fila,columna,tab,jugador)
 {
+	if(jugador == 0)
+		this->caracter = 'I';
+	else if(jugador == 1)	
+		this->caracter = 'L';
 }
 
 bool Infanteria::validar(int Fila, int Columna){

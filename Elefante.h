@@ -6,7 +6,7 @@
 class Elefante : public Pieza
 {
 	public:
-		Elefante(int,int,Pieza***);
+		Elefante(int,int,Pieza***,int);
 		bool validar(int,int);
 		~Elefante();
 	protected:

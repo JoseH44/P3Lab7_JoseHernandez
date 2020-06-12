@@ -8,8 +8,9 @@ class Pieza
 		int fila;
 		int columna;
 		char caracter;
+		int jugador;
 	public:
-		Pieza(int,int,Pieza***);
+		Pieza(int,int,Pieza***,int);
 		bool movimiento(int,int);
 		char getCaracter();
 		int getFila();

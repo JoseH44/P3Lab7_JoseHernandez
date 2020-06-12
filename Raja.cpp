@@ -1,7 +1,11 @@
 #include "Raja.h"
 
-Raja::Raja(int fila,int columna,Pieza*** tab):Pieza(fila,columna,tab)
+Raja::Raja(int fila,int columna,Pieza*** tab,int jugador):Pieza(fila,columna,tab,jugador)
 {
+	if(jugador == 0)
+		this->caracter = 'R';
+	else if(jugador == 1)	
+		this->caracter = 'P';
 }
 
 bool Raja::validar(int Fila, int Columna){

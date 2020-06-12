@@ -1,7 +1,11 @@
 #include "Elefante.h"
 
-Elefante::Elefante(int fila,int columna,Pieza*** tab):Pieza(fila,columna,tab)
+Elefante::Elefante(int fila,int columna,Pieza*** tab,int jugador):Pieza(fila,columna,tab,jugador)
 {
+	if(jugador == 0)
+		this->caracter = 'E';
+	else if(jugador == 1)	
+		this->caracter = '3';
 }
 
 bool Elefante::validar(int Fila, int Columna){

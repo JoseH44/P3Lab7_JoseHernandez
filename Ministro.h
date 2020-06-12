@@ -6,7 +6,7 @@
 class Ministro : public Pieza
 {
 	public:
-		Ministro(int,int,Pieza***);
+		Ministro(int,int,Pieza***,int);
 		bool validar(int,int);
 		~Ministro();
 	protected:

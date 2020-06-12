@@ -6,7 +6,7 @@
 class Infanteria : public Pieza
 {
 	public:
-		Infanteria(int,int,Pieza***);
+		Infanteria(int,int,Pieza***,int);
 		bool validar(int,int);
 		~Infanteria();
 	protected:
