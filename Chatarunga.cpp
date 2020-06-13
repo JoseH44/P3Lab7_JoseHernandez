@@ -81,13 +81,34 @@ void Chatarunga::llenarTablero(){
 }
 
 void Chatarunga::jugar(){
-	
+	int x,y,i,j;
+	x= 0;
+	y= 0;
+	i = 0;
+	j = 0;
 	string movimiento;
 	if(turno){
 		cout<<endl<<"Jugador 1(Piezas Blancas) Ingrese las Coordenadas: ";
+		getline(cin,movimiento);
+		while(!validarString(movimiento,x,y,i,j)){
+			cout<<"Coordenadas Incorrectas"<<endl;
+			cout<<endl<<"Jugador 1(Piezas Blancas) Ingrese las Coordenadas: ";
+			getline(cin,movimiento);
+		}
+		tablero[x][y]->movimiento(i,j);
+	
+		
 		
 		turno = false;
 	}else{
+		cout<<endl<<"Jugador 2(Piezas Negras) Ingrese las Coordenadas: ";
+		getline(cin,movimiento);
+		while(!validarString(movimiento,x,y,i,j)){
+			cout<<"Coordenadas Incorrectas"<<endl;
+			cout<<endl<<"Jugador 2(Piezas Negras) Ingrese las Coordenadas: ";
+			getline(cin,movimiento);
+		}
+		tablero[x][y]->movimiento(i,j);
 		turno = true;
 	}
 	
@@ -97,16 +118,16 @@ void Chatarunga::jugar(){
 bool Chatarunga::validarString(string pString,int& x,int& y,int& i,int& j){
 	bool validez = false;
 	
-	x = pString[1] - '0';
-	y = pString[0] - 'A';
+	x = pString[1] - '0';//fila
+	y = pString[0] - 'A';//columna
 	
-	if(pString[0] == 'A'){
-		 
+	i = pString[4] - '0';//fila
+	j = pString[3] - 'A';//columna
+	
+	if(((x>=0 && x< 8) && (y >= 0 && y<8)) && ((i>=0 && i< 8) && (j >= 0 && j<8))){
 		validez = true;
 	}
-	
-	
-	
+	return validez;
 	
 }
 
