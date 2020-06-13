@@ -36,11 +36,14 @@ void Chatarunga::imprimirTablero(){
 		}
 		cout<<endl;
 	}
+	
+	llenarTablero();
 }
 
 void Chatarunga::llenarTablero(){
 	//llenado de ministro y raja
-	tablero[0][3] = new Raja(0,3,tablero,0);//raja negro
+	Pieza* pieza1 = new Raja(0,3,tablero,0);
+	tablero[0][3] = pieza1;//raja negro
 	tablero[size-1][4] = new Raja(size-1,4,tablero,1);//raja blanco
 	
 	tablero[0][4] = new Ministro(0,4,tablero,0);//ministro negro
