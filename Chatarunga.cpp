@@ -38,7 +38,7 @@ void Chatarunga::imprimirTablero(){
 	}
 	
 	llenarTablero();
-	imprimirTablero();
+
 }
 
 void Chatarunga::llenarTablero(){
