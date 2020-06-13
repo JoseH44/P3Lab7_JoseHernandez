@@ -9,13 +9,19 @@ Elefante::Elefante(int fila,int columna,Pieza*** tab,int jugador):Pieza(fila,col
 }
 
 bool Elefante::validar(int Fila, int Columna){
+bool conclusion = false;
 	if(validarPosicion(Fila,Columna)){
-		//revisar si el movimiento es valido.
+		if(this->jugador == 0){
+			if((Columna == this->columna+2 ||Columna == this->columna-2) && (Fila == this->fila+2 || Fila == this->fila-2))
+				conclusion = true;
+		}else if(this->jugador == 1){
+			if((Columna == this->columna+2 ||Columna == this->columna-2) && (Fila == this->fila+2 || Fila == this->fila-2))
+				conclusion = true;
+		}
 		
-		return true;
-	}else{
-		return false;
+		
 	}
+	return conclusion;
 }
 
 Elefante::~Elefante()

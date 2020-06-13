@@ -22,7 +22,7 @@ Chatarunga::Chatarunga()
 }
 
 void Chatarunga::imprimirTablero(){
-	cout<<" A B C D E F G H"<<endl;
+	cout<<"   A  B  C  D  E  F  G  H"<<endl;
 	for(int i=0;i<size;i++){
 		cout<<endl<<i<<" ";
 		
@@ -86,6 +86,7 @@ void Chatarunga::jugar(){
 	y= 0;
 	i = 0;
 	j = 0;
+	imprimirTablero();
 	string movimiento;
 	if(turno){
 		cout<<endl<<"Jugador 1(Piezas Blancas) Ingrese las Coordenadas: ";
@@ -96,6 +97,7 @@ void Chatarunga::jugar(){
 			getline(cin,movimiento);
 		}
 		tablero[x][y]->movimiento(i,j);
+		imprimirTablero();
 	
 		
 		
@@ -109,6 +111,7 @@ void Chatarunga::jugar(){
 			getline(cin,movimiento);
 		}
 		tablero[x][y]->movimiento(i,j);
+		imprimirTablero();
 		turno = true;
 	}
 	
