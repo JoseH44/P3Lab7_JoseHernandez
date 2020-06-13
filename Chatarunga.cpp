@@ -114,6 +114,7 @@ void Chatarunga::jugar(){
 			cout<<endl<<"Jugador 2(Piezas Negras) Ingrese las Coordenadas: ";
 			getline(cin,movimiento);
 		}
+		
 		tablero[x][y]->movimiento(i,j);
 		imprimirTablero();
 		turno = true;

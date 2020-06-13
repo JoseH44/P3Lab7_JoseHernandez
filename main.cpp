@@ -14,7 +14,9 @@ int main(int argc, char** argv) {
 	cout<<"----BIENVENIDO A CHATARUNGA-----"<<endl<<endl;
 	do{
 		cout<<endl<<"Desea Jugar? (1 = Si): ";
+		
 		getline(cin,respuesta);
+		cout<<endl;
 		if(respuesta == "1")
 			juego->jugar();
 		else
